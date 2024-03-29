@@ -1,0 +1,24 @@
+module univexample10329(A, B, C, D, O1, O2);
+
+input A,B,C,D;
+output O1, O2;
+wire h0, h1,h2,h3,h4,h5,h6, na, nb, nc, nd;
+
+not (na, A);
+not (nb, B);
+not (nc, C);
+not (nd, D);
+
+and (h0, na, B, nd);
+and (h1, B, C, D);
+and (h2, A, B, nc);
+and (h3, A, nb, D);
+
+and (h4, B, nc, nd);
+and (h5, A, D);
+and (h6, na, B ,C)
+
+or (O1, h0,h2,h3,h4);
+or (O2, h5,h6,h7);
+
+endmodule
