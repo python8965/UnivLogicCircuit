@@ -1,26 +1,26 @@
-|univexample03291
-A => A2.IN0
-A => A3.IN0
-A => A5.IN0
-A => A0.IN0
-A => A6.IN0
-B => A0.IN1
-B => A1.IN0
-B => A2.IN1
-B => A4.IN0
-B => A6.IN1
-B => A3.IN1
-C => A1.IN1
-C => A6.IN2
-C => A2.IN2
-C => A4.IN1
-D => A1.IN2
-D => A3.IN2
-D => A5.IN1
-D => A0.IN2
-D => A4.IN2
-O1 <= LOR.DB_MAX_OUTPUT_PORT_TYPE
-O2 <= ROR.DB_MAX_OUTPUT_PORT_TYPE
+|example0405
+W => A1.IN0
+W => A3.IN0
+W => OR2.IN0
+W => A2.IN0
+W => A4.IN0
+W => OR1.IN0
+X => A1.IN1
+X => OR3.IN0
+X => A2.IN1
+Y => A4.IN1
+Y => OR2.IN1
+Y => OR3.IN1
+Y => A1.IN2
+Y => A3.IN1
+Y => OR1.IN1
+Z => A2.IN2
+Z => A3.IN2
+Z => OR2.IN2
+Z => OR3.IN2
+Z => A4.IN2
+O1 <= L.DB_MAX_OUTPUT_PORT_TYPE
+O2 <= R.DB_MAX_OUTPUT_PORT_TYPE
 p <= <GND>
 
 

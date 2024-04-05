@@ -182,13 +182,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 111       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 112       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 113       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 114       :        :                   :         : 7         :                
-A                            : 115       : input  : 2.5 V             :         : 7         : Y              
+W                            : 115       : input  : 2.5 V             :         : 7         : Y              
 VCCINT                       : 116       : power  :                   : 1.2V    :           :                
 VCCIO7                       : 117       : power  :                   : 2.5V    : 7         :                
 GND                          : 118       : gnd    :                   :         :           :                
-B                            : 119       : input  : 2.5 V             :         : 7         : Y              
-C                            : 120       : input  : 2.5 V             :         : 7         : Y              
-D                            : 121       : input  : 2.5 V             :         : 7         : Y              
+X                            : 119       : input  : 2.5 V             :         : 7         : Y              
+Y                            : 120       : input  : 2.5 V             :         : 7         : Y              
+Z                            : 121       : input  : 2.5 V             :         : 7         : Y              
 VCCIO7                       : 122       : power  :                   : 2.5V    : 7         :                
 GND                          : 123       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 124       :        :                   :         : 7         :                

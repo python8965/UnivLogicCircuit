@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "03/29/2024 14:45:48"
+// DATE "04/05/2024 15:40:07"
 
 // 
 // Device: Altera EP4CE6E22C8 Package TQFP144
@@ -28,18 +28,18 @@
 
 `timescale 1 ps/ 1 ps
 
-module univexample03291 (
-	A,
-	B,
-	C,
-	D,
+module example0405 (
+	W,
+	X,
+	Y,
+	Z,
 	O1,
 	O2,
 	p);
-input 	A;
-input 	B;
-input 	C;
-input 	D;
+input 	W;
+input 	X;
+input 	Y;
+input 	Z;
 output 	O1;
 output 	O2;
 output 	p;
@@ -48,10 +48,10 @@ output 	p;
 // O1	=>  Location: PIN_28,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // O2	=>  Location: PIN_30,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // p	=>  Location: PIN_49,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// D	=>  Location: PIN_121,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// B	=>  Location: PIN_119,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// A	=>  Location: PIN_115,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// C	=>  Location: PIN_120,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Z	=>  Location: PIN_121,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// X	=>  Location: PIN_119,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// W	=>  Location: PIN_115,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Y	=>  Location: PIN_120,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -72,16 +72,17 @@ initial $sdf_annotate("psj_8_1200mv_0c_v_slow.sdo");
 wire \O1~output_o ;
 wire \O2~output_o ;
 wire \p~output_o ;
-wire \B~input_o ;
-wire \C~input_o ;
-wire \D~input_o ;
-wire \A~input_o ;
-wire \ROR~0_combout ;
+wire \Y~input_o ;
+wire \X~input_o ;
+wire \Z~input_o ;
+wire \W~input_o ;
+wire \L~0_combout ;
+wire \R~0_combout ;
 
 
 // Location: IOOBUF_X0_Y9_N9
 cycloneive_io_obuf \O1~output (
-	.i(\ROR~0_combout ),
+	.i(\L~0_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -94,7 +95,7 @@ defparam \O1~output .open_drain_output = "false";
 
 // Location: IOOBUF_X0_Y8_N16
 cycloneive_io_obuf \O2~output (
-	.i(\ROR~0_combout ),
+	.i(\R~0_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -118,61 +119,78 @@ defparam \p~output .bus_hold = "false";
 defparam \p~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOIBUF_X23_Y24_N1
-cycloneive_io_ibuf \B~input (
-	.i(B),
+// Location: IOIBUF_X23_Y24_N8
+cycloneive_io_ibuf \Y~input (
+	.i(Y),
 	.ibar(gnd),
-	.o(\B~input_o ));
+	.o(\Y~input_o ));
 // synopsys translate_off
-defparam \B~input .bus_hold = "false";
-defparam \B~input .simulate_z_as = "z";
+defparam \Y~input .bus_hold = "false";
+defparam \Y~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X23_Y24_N8
-cycloneive_io_ibuf \C~input (
-	.i(C),
+// Location: IOIBUF_X23_Y24_N1
+cycloneive_io_ibuf \X~input (
+	.i(X),
 	.ibar(gnd),
-	.o(\C~input_o ));
+	.o(\X~input_o ));
 // synopsys translate_off
-defparam \C~input .bus_hold = "false";
-defparam \C~input .simulate_z_as = "z";
+defparam \X~input .bus_hold = "false";
+defparam \X~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X23_Y24_N15
-cycloneive_io_ibuf \D~input (
-	.i(D),
+cycloneive_io_ibuf \Z~input (
+	.i(Z),
 	.ibar(gnd),
-	.o(\D~input_o ));
+	.o(\Z~input_o ));
 // synopsys translate_off
-defparam \D~input .bus_hold = "false";
-defparam \D~input .simulate_z_as = "z";
+defparam \Z~input .bus_hold = "false";
+defparam \Z~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X28_Y24_N22
-cycloneive_io_ibuf \A~input (
-	.i(A),
+cycloneive_io_ibuf \W~input (
+	.i(W),
 	.ibar(gnd),
-	.o(\A~input_o ));
+	.o(\W~input_o ));
 // synopsys translate_off
-defparam \A~input .bus_hold = "false";
-defparam \A~input .simulate_z_as = "z";
+defparam \W~input .bus_hold = "false";
+defparam \W~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X24_Y23_N16
-cycloneive_lcell_comb \ROR~0 (
+// Location: LCCOMB_X21_Y23_N0
+cycloneive_lcell_comb \L~0 (
 // Equation(s):
-// \ROR~0_combout  = (\C~input_o  & ((\A~input_o  & ((\D~input_o ))) # (!\A~input_o  & (\B~input_o )))) # (!\C~input_o  & ((\D~input_o  & ((\A~input_o ))) # (!\D~input_o  & (\B~input_o ))))
+// \L~0_combout  = (\Y~input_o  & (!\W~input_o  & ((!\Z~input_o ) # (!\X~input_o )))) # (!\Y~input_o  & ((\X~input_o  & ((\W~input_o ))) # (!\X~input_o  & (\Z~input_o ))))
 
-	.dataa(\B~input_o ),
-	.datab(\C~input_o ),
-	.datac(\D~input_o ),
-	.datad(\A~input_o ),
+	.dataa(\Y~input_o ),
+	.datab(\X~input_o ),
+	.datac(\Z~input_o ),
+	.datad(\W~input_o ),
 	.cin(gnd),
-	.combout(\ROR~0_combout ),
+	.combout(\L~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ROR~0 .lut_mask = 16'hF28A;
-defparam \ROR~0 .sum_lutc_input = "datac";
+defparam \L~0 .lut_mask = 16'h543A;
+defparam \L~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X21_Y23_N18
+cycloneive_lcell_comb \R~0 (
+// Equation(s):
+// \R~0_combout  = (\Y~input_o  & (((!\W~input_o )))) # (!\Y~input_o  & ((\Z~input_o ) # ((\X~input_o  & \W~input_o ))))
+
+	.dataa(\Y~input_o ),
+	.datab(\X~input_o ),
+	.datac(\Z~input_o ),
+	.datad(\W~input_o ),
+	.cin(gnd),
+	.combout(\R~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \R~0 .lut_mask = 16'h54FA;
+defparam \R~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 assign O1 = \O1~output_o ;
