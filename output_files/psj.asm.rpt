@@ -1,5 +1,5 @@
 Assembler report for psj
-Fri Apr 05 15:40:03 2024
+Fri Apr 12 14:17:21 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -37,9 +37,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Apr 05 15:40:03 2024 ;
+; Assembler Status      ; Successful - Fri Apr 12 14:17:21 2024 ;
 ; Revision Name         ; psj                                   ;
-; Top-level Entity Name ; example0405                           ;
+; Top-level Entity Name ; full_adder                            ;
 ; Family                ; Cyclone IV E                          ;
 ; Device                ; EP4CE6E22C8                           ;
 +-----------------------+---------------------------------------+
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                              ;
 +----------------+------------------------------------------------------+
 ; Device         ; EP4CE6E22C8                                          ;
-; JTAG usercode  ; 0x00093942                                           ;
-; Checksum       ; 0x00093942                                           ;
+; JTAG usercode  ; 0x00093996                                           ;
+; Checksum       ; 0x00093996                                           ;
 +----------------+------------------------------------------------------+
 
 
@@ -103,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Apr 05 15:40:02 2024
+    Info: Processing started: Fri Apr 12 14:17:20 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off psj -c psj
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4552 megabytes
-    Info: Processing ended: Fri Apr 05 15:40:03 2024
+    Info: Processing ended: Fri Apr 12 14:17:21 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -1,26 +1,27 @@
-|example0405
-W => A1.IN0
-W => A3.IN0
-W => OR2.IN0
-W => A2.IN0
-W => A4.IN0
-W => OR1.IN0
-X => A1.IN1
-X => OR3.IN0
-X => A2.IN1
-Y => A4.IN1
-Y => OR2.IN1
-Y => OR3.IN1
-Y => A1.IN2
-Y => A3.IN1
-Y => OR1.IN1
-Z => A2.IN2
-Z => A3.IN2
-Z => OR2.IN2
-Z => OR3.IN2
-Z => A4.IN2
-O1 <= L.DB_MAX_OUTPUT_PORT_TYPE
-O2 <= R.DB_MAX_OUTPUT_PORT_TYPE
+|full_adder
+x => x.IN1
+y => y.IN1
+cin => cin.IN1
+sum <= half_adder:HA2.port2
+cout <= U3.DB_MAX_OUTPUT_PORT_TYPE
 p <= <GND>
+
+
+|full_adder|half_adder:HA1
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder|half_adder:HA2
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
 
 

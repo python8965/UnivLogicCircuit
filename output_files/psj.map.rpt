@@ -1,5 +1,5 @@
 Analysis & Synthesis report for psj
-Fri Apr 05 15:39:57 2024
+Fri Apr 12 14:17:15 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,16 +41,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 05 15:39:57 2024           ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 12 14:17:15 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; psj                                             ;
-; Top-level Entity Name              ; example0405                                     ;
+; Top-level Entity Name              ; full_adder                                      ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Total logic elements               ; 2                                               ;
 ;     Total combinational functions  ; 2                                               ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 7                                               ;
+; Total pins                         ; 6                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE6E22C8        ;                    ;
-; Top-level entity name                                                      ; example0405        ; psj                ;
+; Top-level entity name                                                      ; full_adder         ; psj                ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -156,13 +156,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                       ;
-+----------------------------------+-----------------+------------------------+--------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path         ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------+---------+
-; example0405.v                    ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/example0405.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                      ;
++----------------------------------+-----------------+------------------------+-------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path        ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------+---------+
+; half_adder.v                     ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/half_adder.v ;         ;
+; full_adder.v                     ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/full_adder.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------+---------+
 
 
 +-------------------------------------------------------+
@@ -174,8 +175,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;         ;
 ; Total combinational functions               ; 2       ;
 ; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 2       ;
-;     -- 3 input functions                    ; 0       ;
+;     -- 4 input functions                    ; 0       ;
+;     -- 3 input functions                    ; 2       ;
 ;     -- <=2 input functions                  ; 0       ;
 ;                                             ;         ;
 ; Logic elements by mode                      ;         ;
@@ -186,22 +187,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- Dedicated logic registers            ; 0       ;
 ;     -- I/O registers                        ; 0       ;
 ;                                             ;         ;
-; I/O pins                                    ; 7       ;
+; I/O pins                                    ; 6       ;
 ; Embedded Multiplier 9-bit elements          ; 0       ;
-; Maximum fan-out node                        ; Z~input ;
+; Maximum fan-out node                        ; x~input ;
 ; Maximum fan-out                             ; 2       ;
-; Total fan-out                               ; 17      ;
-; Average fan-out                             ; 1.06    ;
+; Total fan-out                               ; 14      ;
+; Average fan-out                             ; 1.00    ;
 +---------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |example0405               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |example0405        ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
+; |full_adder                ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |full_adder                ; work         ;
+;    |half_adder:HA2|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |full_adder|half_adder:HA2 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -235,7 +237,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Apr 05 15:39:55 2024
+    Info: Processing started: Fri Apr 12 14:17:13 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off psj -c psj
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file univexample03291.v
@@ -247,19 +249,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file half_ad
 Info (12021): Found 0 design units, including 0 entities, in source file int_display.v
 Info (12021): Found 1 design units, including 1 entities, in source file example0405.v
     Info (12023): Found entity 1: example0405
-Info (12127): Elaborating entity "example0405" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file full_adder.v
+    Info (12023): Found entity 1: full_adder
+Info (12127): Elaborating entity "full_adder" for the top level hierarchy
+Info (12128): Elaborating entity "half_adder" for hierarchy "half_adder:HA1"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "p" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 9 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
+Info (21057): Implemented 8 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
     Info (21059): Implemented 3 output pins
     Info (21061): Implemented 2 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4595 megabytes
-    Info: Processing ended: Fri Apr 05 15:39:57 2024
+    Info: Processing ended: Fri Apr 12 14:17:15 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

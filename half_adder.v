@@ -1,10 +1,8 @@
-module half_adder(A, B, S, C, p);
+module half_adder(A, B, S, C);
 input A,B;
-output C, S, p;
+output C, S;
 
 and U1 (C, A, B);
 xor U2 (S, A, B);
-
-assign p = 1'b0;
 
 endmodule
