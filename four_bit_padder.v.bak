@@ -1,0 +1,3 @@
+module four_bit_padder(A0, A1, A2, A3, B0, B1, B2, B3, Cin, Cout, S0, S1, S2, S3);
+
+endmodule
