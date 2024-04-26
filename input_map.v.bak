@@ -1,0 +1,9 @@
+module input_map(LED, SEG, CA, DSW, p);
+input [7:0] DSW;
+output [7:0] LED, SEG;
+output [3:0] CA;
+output p;
+
+assign p = 1'b0;
+
+endmodule
