@@ -1,1 +1,5 @@
 Info (10281): Verilog HDL Declaration information at seg_7.v(2): object "A" differs only in case from object "a" in the same scope
+Info (10281): Verilog HDL Declaration information at seg_7_hex.v(3): object "a" differs only in case from object "A" in the same scope
+Info (10281): Verilog HDL Declaration information at seg_7_hex.v(3): object "b" differs only in case from object "B" in the same scope
+Info (10281): Verilog HDL Declaration information at seg_7_hex.v(3): object "c" differs only in case from object "C" in the same scope
+Info (10281): Verilog HDL Declaration information at seg_7_hex.v(3): object "d" differs only in case from object "D" in the same scope

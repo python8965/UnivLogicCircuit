@@ -1,5 +1,5 @@
 Fitter report for psj
-Fri Apr 26 13:52:05 2024
+Fri May 03 14:39:32 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Apr 26 13:52:05 2024           ;
+; Fitter Status                      ; Successful - Fri May 03 14:39:32 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; psj                                             ;
 ; Top-level Entity Name              ; input_map                                       ;
@@ -234,8 +234,8 @@ The pin-out file can be found in C:/altera/projects/psj/output_files/psj.pin.
 ;     -- Combinational with a register        ; 0                   ;
 ;                                             ;                     ;
 ; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 4                   ;
-;     -- 3 input functions                    ; 3                   ;
+;     -- 4 input functions                    ; 7                   ;
+;     -- 3 input functions                    ; 0                   ;
 ;     -- <=2 input functions                  ; 0                   ;
 ;     -- Register only                        ; 0                   ;
 ;                                             ;                     ;
@@ -268,8 +268,8 @@ The pin-out file can be found in C:/altera/projects/psj/output_files/psj.pin.
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%        ;
 ; Maximum fan-out                             ; 8                   ;
 ; Highest non-global fan-out                  ; 8                   ;
-; Total fan-out                               ; 74                  ;
-; Average fan-out                             ; 0.99                ;
+; Total fan-out                               ; 77                  ;
+; Average fan-out                             ; 1.03                ;
 +---------------------------------------------+---------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -288,8 +288,8 @@ The pin-out file can be found in C:/altera/projects/psj/output_files/psj.pin.
 ;     -- Combinational with a register        ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Logic element usage by number of LUT inputs ;                    ;                                ;
-;     -- 4 input functions                    ; 4                  ; 0                              ;
-;     -- 3 input functions                    ; 3                  ; 0                              ;
+;     -- 4 input functions                    ; 7                  ; 0                              ;
+;     -- 3 input functions                    ; 0                  ; 0                              ;
 ;     -- <=2 input functions                  ; 0                  ; 0                              ;
 ;     -- Register only                        ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
@@ -315,7 +315,7 @@ The pin-out file can be found in C:/altera/projects/psj/output_files/psj.pin.
 ;     -- Registered Output Connections        ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Internal Connections                        ;                    ;                                ;
-;     -- Total Connections                    ; 69                 ; 5                              ;
+;     -- Total Connections                    ; 72                 ; 5                              ;
 ;     -- Registered Connections               ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; External Connections                        ;                    ;                                ;
@@ -348,14 +348,14 @@ The pin-out file can be found in C:/altera/projects/psj/output_files/psj.pin.
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; DSW[0] ; 115   ; 7        ; 28           ; 24           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; DSW[1] ; 119   ; 7        ; 23           ; 24           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; DSW[2] ; 120   ; 7        ; 23           ; 24           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; DSW[3] ; 121   ; 7        ; 23           ; 24           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; DSW[4] ; 124   ; 7        ; 18           ; 24           ; 14           ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; DSW[5] ; 126   ; 7        ; 16           ; 24           ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; DSW[6] ; 127   ; 7        ; 16           ; 24           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; DSW[7] ; 128   ; 8        ; 16           ; 24           ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; DSW[0] ; 115   ; 7        ; 28           ; 24           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; DSW[1] ; 119   ; 7        ; 23           ; 24           ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; DSW[2] ; 120   ; 7        ; 23           ; 24           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; DSW[3] ; 121   ; 7        ; 23           ; 24           ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; DSW[4] ; 124   ; 7        ; 18           ; 24           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; DSW[5] ; 126   ; 7        ; 16           ; 24           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; DSW[6] ; 127   ; 7        ; 16           ; 24           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; DSW[7] ; 128   ; 8        ; 16           ; 24           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -580,14 +580,14 @@ The pin-out file can be found in C:/altera/projects/psj/output_files/psj.pin.
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                           ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |input_map                 ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 29   ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; |input_map          ; work         ;
-;    |seg_7:S|               ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |input_map|seg_7:S  ; work         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                              ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name    ; Library Name ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------+--------------+
+; |input_map                 ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 29   ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; |input_map             ; work         ;
+;    |seg_7_hex:S|           ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |input_map|seg_7_hex:S ; work         ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -617,87 +617,90 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CA[1]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; CA[0]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; p      ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; DSW[7] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; DSW[6] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; DSW[5] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; DSW[4] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; DSW[3] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; DSW[2] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; DSW[0] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; DSW[1] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; DSW[0] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; DSW[2] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; DSW[3] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; DSW[4] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; DSW[5] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; DSW[6] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; DSW[7] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +--------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+----------------------------------------------------+
-; Pad To Core Delay Chain Fanout                     ;
-+----------------------+-------------------+---------+
-; Source Pin / Fanout  ; Pad To Core Index ; Setting ;
-+----------------------+-------------------+---------+
-; DSW[7]               ;                   ;         ;
-;      - seg_7:S|g~0   ; 0                 ; 6       ;
-;      - seg_7:S|f~0   ; 0                 ; 6       ;
-;      - seg_7:S|e~0   ; 0                 ; 6       ;
-;      - seg_7:S|d~0   ; 0                 ; 6       ;
-;      - seg_7:S|c     ; 0                 ; 6       ;
-;      - seg_7:S|b~0   ; 0                 ; 6       ;
-;      - seg_7:S|a~0   ; 0                 ; 6       ;
-;      - LED[7]~output ; 0                 ; 6       ;
-; DSW[6]               ;                   ;         ;
-;      - seg_7:S|g~0   ; 0                 ; 6       ;
-;      - seg_7:S|f~0   ; 0                 ; 6       ;
-;      - seg_7:S|e~0   ; 0                 ; 6       ;
-;      - seg_7:S|d~0   ; 0                 ; 6       ;
-;      - seg_7:S|c     ; 0                 ; 6       ;
-;      - seg_7:S|b~0   ; 0                 ; 6       ;
-;      - seg_7:S|a~0   ; 0                 ; 6       ;
-;      - LED[6]~output ; 0                 ; 6       ;
-; DSW[5]               ;                   ;         ;
-;      - seg_7:S|g~0   ; 0                 ; 6       ;
-;      - seg_7:S|f~0   ; 0                 ; 6       ;
-;      - seg_7:S|e~0   ; 0                 ; 6       ;
-;      - seg_7:S|d~0   ; 0                 ; 6       ;
-;      - seg_7:S|c     ; 0                 ; 6       ;
-;      - seg_7:S|b~0   ; 0                 ; 6       ;
-;      - seg_7:S|a~0   ; 0                 ; 6       ;
-;      - LED[5]~output ; 0                 ; 6       ;
-; DSW[4]               ;                   ;         ;
-;      - seg_7:S|g~0   ; 0                 ; 6       ;
-;      - seg_7:S|f~0   ; 0                 ; 6       ;
-;      - seg_7:S|d~0   ; 0                 ; 6       ;
-;      - seg_7:S|a~0   ; 0                 ; 6       ;
-;      - LED[4]~output ; 0                 ; 6       ;
-; DSW[3]               ;                   ;         ;
-;      - LED[3]~output ; 0                 ; 6       ;
-; DSW[2]               ;                   ;         ;
-;      - LED[2]~output ; 0                 ; 6       ;
-; DSW[1]               ;                   ;         ;
-;      - LED[1]~output ; 0                 ; 6       ;
-; DSW[0]               ;                   ;         ;
-;      - LED[0]~output ; 1                 ; 6       ;
-+----------------------+-------------------+---------+
++------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                       ;
++------------------------+-------------------+---------+
+; Source Pin / Fanout    ; Pad To Core Index ; Setting ;
++------------------------+-------------------+---------+
+; DSW[0]                 ;                   ;         ;
+;      - seg_7_hex:S|g~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|f~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|e~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|d~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|c~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|b~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|a~0 ; 0                 ; 6       ;
+;      - LED[7]~output   ; 0                 ; 6       ;
+; DSW[1]                 ;                   ;         ;
+;      - seg_7_hex:S|g~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|f~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|e~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|d~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|c~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|b~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|a~0 ; 0                 ; 6       ;
+;      - LED[6]~output   ; 0                 ; 6       ;
+; DSW[2]                 ;                   ;         ;
+;      - seg_7_hex:S|g~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|f~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|e~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|d~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|c~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|b~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|a~0 ; 0                 ; 6       ;
+;      - LED[5]~output   ; 0                 ; 6       ;
+; DSW[3]                 ;                   ;         ;
+;      - seg_7_hex:S|g~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|f~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|e~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|d~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|c~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|b~0 ; 0                 ; 6       ;
+;      - seg_7_hex:S|a~0 ; 0                 ; 6       ;
+;      - LED[4]~output   ; 0                 ; 6       ;
+; DSW[4]                 ;                   ;         ;
+;      - LED[3]~output   ; 0                 ; 6       ;
+; DSW[5]                 ;                   ;         ;
+;      - LED[2]~output   ; 0                 ; 6       ;
+; DSW[6]                 ;                   ;         ;
+;      - LED[1]~output   ; 1                 ; 6       ;
+; DSW[7]                 ;                   ;         ;
+;      - LED[0]~output   ; 0                 ; 6       ;
++------------------------+-------------------+---------+
 
 
 +---------------------------------+
 ; Non-Global High Fan-Out Signals ;
-+--------------+------------------+
-; Name         ; Fan-Out          ;
-+--------------+------------------+
-; DSW[5]~input ; 8                ;
-; DSW[6]~input ; 8                ;
-; DSW[7]~input ; 8                ;
-; DSW[4]~input ; 5                ;
-; DSW[0]~input ; 1                ;
-; DSW[1]~input ; 1                ;
-; DSW[2]~input ; 1                ;
-; DSW[3]~input ; 1                ;
-; seg_7:S|a~0  ; 1                ;
-; seg_7:S|b~0  ; 1                ;
-; seg_7:S|c    ; 1                ;
-; seg_7:S|d~0  ; 1                ;
-; seg_7:S|e~0  ; 1                ;
-; seg_7:S|f~0  ; 1                ;
-; seg_7:S|g~0  ; 1                ;
-+--------------+------------------+
++-----------------+---------------+
+; Name            ; Fan-Out       ;
++-----------------+---------------+
+; DSW[3]~input    ; 8             ;
+; DSW[2]~input    ; 8             ;
+; DSW[1]~input    ; 8             ;
+; DSW[0]~input    ; 8             ;
+; DSW[7]~input    ; 1             ;
+; DSW[6]~input    ; 1             ;
+; DSW[5]~input    ; 1             ;
+; DSW[4]~input    ; 1             ;
+; seg_7_hex:S|a~0 ; 1             ;
+; seg_7_hex:S|b~0 ; 1             ;
+; seg_7_hex:S|c~0 ; 1             ;
+; seg_7_hex:S|d~0 ; 1             ;
+; seg_7_hex:S|e~0 ; 1             ;
+; seg_7_hex:S|f~0 ; 1             ;
+; seg_7_hex:S|g~0 ; 1             ;
++-----------------+---------------+
 
 
 +-----------------------------------------------------+
@@ -706,12 +709,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
 ; Block interconnects         ; 19 / 32,401 ( < 1 % ) ;
-; C16 interconnects           ; 14 / 1,326 ( 1 % )    ;
-; C4 interconnects            ; 13 / 21,816 ( < 1 % ) ;
+; C16 interconnects           ; 15 / 1,326 ( 1 % )    ;
+; C4 interconnects            ; 14 / 21,816 ( < 1 % ) ;
 ; Global clocks               ; 0 / 10 ( 0 % )        ;
 ; Local interconnects         ; 0 / 10,320 ( 0 % )    ;
 ; R24 interconnects           ; 10 / 1,289 ( < 1 % )  ;
-; R4 interconnects            ; 5 / 28,186 ( < 1 % )  ;
+; R4 interconnects            ; 10 / 28,186 ( < 1 % ) ;
 +-----------------------------+-----------------------+
 
 
@@ -866,14 +869,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CA[1]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; CA[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; p                  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; DSW[7]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; DSW[6]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; DSW[5]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; DSW[4]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; DSW[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; DSW[2]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; DSW[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; DSW[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; DSW[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; DSW[2]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; DSW[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; DSW[4]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; DSW[5]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; DSW[6]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; DSW[7]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -958,7 +961,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -967,7 +970,7 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/altera/projects/psj/output_files/psj.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4895 megabytes
-    Info: Processing ended: Fri Apr 26 13:52:05 2024
+    Info: Processing ended: Fri May 03 14:39:32 2024
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
