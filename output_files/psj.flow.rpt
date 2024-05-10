@@ -1,5 +1,5 @@
 Flow report for psj
-Fri May 03 14:39:38 2024
+Fri May 10 14:40:20 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri May 03 14:39:38 2024           ;
+; Flow Status                        ; Successful - Fri May 10 14:40:20 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; psj                                             ;
 ; Top-level Entity Name              ; input_map                                       ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE6E22C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 7 / 6,272 ( < 1 % )                             ;
-;     Total combinational functions  ; 7 / 6,272 ( < 1 % )                             ;
-;     Dedicated logic registers      ; 0 / 6,272 ( 0 % )                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 29 / 92 ( 32 % )                                ;
+; Total logic elements               ; 45 / 6,272 ( < 1 % )                            ;
+;     Total combinational functions  ; 41 / 6,272 ( < 1 % )                            ;
+;     Dedicated logic registers      ; 15 / 6,272 ( < 1 % )                            ;
+; Total registers                    ; 15                                              ;
+; Total pins                         ; 30 / 92 ( 33 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/03/2024 14:39:27 ;
+; Start date & time ; 05/10/2024 14:40:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; psj                 ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ applicable agreement for further details.
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; AUTO_DELAY_CHAINS                   ; On                                    ; Off           ; --          ; --             ;
-; COMPILER_SIGNATURE_ID               ; 154880083039250.171471476603408       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 154880083039250.171531960700888       ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
@@ -98,11 +98,11 @@ applicable agreement for further details.
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4584 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:04     ; 1.0                     ; 4895 MB             ; 00:00:04                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 4904 MB             ; 00:00:05                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4598 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4505 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:08     ; --                      ; --                  ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4590 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4510 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:09     ; --                      ; --                  ; 00:00:10                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

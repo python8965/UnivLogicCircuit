@@ -11,7 +11,7 @@ wire wclock;
 cnt C1 (clock, wclock);
 
 seg_7 LSD(a, data_w1[0], data_w1[1], data_w1[2], data_w1[3], data_w1[4], data_w1[5], data_w1[6]);
-seg_7 MSD(a, data_w2[0], data_w2[1], data_w2[2], data_w2[3], data_w2[4], data_w2[5], data_w2[6]);
+seg_7 MSD(b, data_w2[0], data_w2[1], data_w2[2], data_w2[3], data_w2[4], data_w2[5], data_w2[6]);
 
 mux2to1 M1 (wclock, data_w1[0], data_w2[0], data_out[0]);
 mux2to1 M2 (wclock, data_w1[1], data_w2[1], data_out[1]);

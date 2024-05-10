@@ -1,4 +1,4 @@
-module four_bit_padder(A, B, S, Cout, V,p );
+module four_bit_padder(A, B, S, Cout, V, p);
 
 input [3:0] A;
 input [3:0] B;

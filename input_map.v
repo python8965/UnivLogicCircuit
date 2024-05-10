@@ -1,12 +1,12 @@
-module input_map(LED, SEG, CA, DSW, p);
-input [7:0] DSW;
-output [0:7] LED, SEG;
-output [0:3] CA;
+module input_map(LED, SEG, CA, DSW, CLOCK, p);
+input [0:7] DSW;
+input CLOCK;
+output [7:0] LED, SEG;
+output [3:0] CA;
 output p;
 
 assign p = 1'b0;
 
-seg_7_hex S (DSW[3:0], SEG[0], SEG[1], SEG[2], SEG[3], SEG[4], SEG[5], SEG[6], CA);
-assign LED[0:7] = DSW[7:0];
+seg_7_2 S (DSW[4:7], DSW[0:3],CLOCK, CA, SEG);
 
 endmodule
