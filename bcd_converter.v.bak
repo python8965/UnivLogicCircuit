@@ -1,0 +1,25 @@
+module bcd_converter(IN, TEN, ONE);
+input [4:0] IN;
+output [3:0] TEN, ONE;
+
+wire a, b, c, d, e, na, nb, nd, nd, ne;
+
+assign a = IN[0];
+assign b = IN[1];
+assign c = IN[2];
+assign d = IN[3];
+assign e = IN[4];
+not n1 (na, a);
+not n2 (nb, b);
+not n3 (nc, c);
+not n4 (nd, d);
+not n5 (ne, e);
+assign TEN[3:2] = 2'b00; 
+assign TEN[1] =
+assign TEN[0] = 
+assign ONE[3] = 
+assign ONE[2] =
+assign ONE[1] =
+assign ONE[0] =
+
+endmodule

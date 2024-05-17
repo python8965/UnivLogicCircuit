@@ -7,18 +7,18 @@ LED[4] <= <GND>
 LED[5] <= <GND>
 LED[6] <= <GND>
 LED[7] <= <GND>
-SEG[0] <= seg_7_2:S.port4
-SEG[1] <= seg_7_2:S.port4
-SEG[2] <= seg_7_2:S.port4
-SEG[3] <= seg_7_2:S.port4
-SEG[4] <= seg_7_2:S.port4
-SEG[5] <= seg_7_2:S.port4
-SEG[6] <= seg_7_2:S.port4
-SEG[7] <= seg_7_2:S.port4
-CA[0] <= seg_7_2:S.port3
-CA[1] <= seg_7_2:S.port3
-CA[2] <= seg_7_2:S.port3
-CA[3] <= seg_7_2:S.port3
+SEG[0] <= final:FIN.port2
+SEG[1] <= final:FIN.port2
+SEG[2] <= final:FIN.port2
+SEG[3] <= final:FIN.port2
+SEG[4] <= final:FIN.port2
+SEG[5] <= final:FIN.port2
+SEG[6] <= final:FIN.port2
+SEG[7] <= final:FIN.port2
+CA[0] <= final:FIN.port3
+CA[1] <= final:FIN.port3
+CA[2] <= final:FIN.port3
+CA[3] <= final:FIN.port3
 DSW[7] => DSW[7].IN1
 DSW[6] => DSW[6].IN1
 DSW[5] => DSW[5].IN1
@@ -31,7 +31,200 @@ CLOCK => CLOCK.IN1
 p <= <GND>
 
 
-|input_map|seg_7_2:S
+|input_map|final:FIN
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+SEG[0] <= seg_7_2:TDSEG.port4
+SEG[1] <= seg_7_2:TDSEG.port4
+SEG[2] <= seg_7_2:TDSEG.port4
+SEG[3] <= seg_7_2:TDSEG.port4
+SEG[4] <= seg_7_2:TDSEG.port4
+SEG[5] <= seg_7_2:TDSEG.port4
+SEG[6] <= seg_7_2:TDSEG.port4
+SEG[7] <= seg_7_2:TDSEG.port4
+CA[0] <= seg_7_2:TDSEG.port3
+CA[1] <= seg_7_2:TDSEG.port3
+CA[2] <= seg_7_2:TDSEG.port3
+CA[3] <= seg_7_2:TDSEG.port3
+CLK => CLK.IN1
+
+
+|input_map|final:FIN|four_bit_padder:ADDER
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+S[0] <= full_adder:F1.port3
+S[1] <= full_adder:F2.port3
+S[2] <= full_adder:F3.port3
+S[3] <= full_adder:F4.port3
+Cout <= full_adder:F4.port4
+V <= Vor.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|input_map|final:FIN|four_bit_padder:ADDER|full_adder:F1
+x => x.IN1
+y => y.IN1
+cin => cin.IN1
+sum <= half_adder:HA2.port2
+cout <= U3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|input_map|final:FIN|four_bit_padder:ADDER|full_adder:F1|half_adder:HA1
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|input_map|final:FIN|four_bit_padder:ADDER|full_adder:F1|half_adder:HA2
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|input_map|final:FIN|four_bit_padder:ADDER|full_adder:F2
+x => x.IN1
+y => y.IN1
+cin => cin.IN1
+sum <= half_adder:HA2.port2
+cout <= U3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|input_map|final:FIN|four_bit_padder:ADDER|full_adder:F2|half_adder:HA1
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|input_map|final:FIN|four_bit_padder:ADDER|full_adder:F2|half_adder:HA2
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|input_map|final:FIN|four_bit_padder:ADDER|full_adder:F3
+x => x.IN1
+y => y.IN1
+cin => cin.IN1
+sum <= half_adder:HA2.port2
+cout <= U3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|input_map|final:FIN|four_bit_padder:ADDER|full_adder:F3|half_adder:HA1
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|input_map|final:FIN|four_bit_padder:ADDER|full_adder:F3|half_adder:HA2
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|input_map|final:FIN|four_bit_padder:ADDER|full_adder:F4
+x => x.IN1
+y => y.IN1
+cin => cin.IN1
+sum <= half_adder:HA2.port2
+cout <= U3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|input_map|final:FIN|four_bit_padder:ADDER|full_adder:F4|half_adder:HA1
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|input_map|final:FIN|four_bit_padder:ADDER|full_adder:F4|half_adder:HA2
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|input_map|final:FIN|bcd_converter:BCD
+IN[0] => ONE[0].DATAIN
+IN[1] => TEN.IN1
+IN[1] => TEN.IN1
+IN[1] => ONE.IN1
+IN[1] => ONE.IN1
+IN[1] => ONE.IN1
+IN[1] => ONE.IN1
+IN[1] => ONE.IN1
+IN[1] => ONE.IN1
+IN[1] => ONE.IN1
+IN[1] => ONE.IN1
+IN[1] => ONE.IN1
+IN[1] => ONE.IN1
+IN[2] => TEN.IN0
+IN[2] => TEN.IN1
+IN[2] => TEN.IN0
+IN[2] => ONE.IN1
+IN[2] => ONE.IN1
+IN[2] => ONE.IN0
+IN[2] => ONE.IN0
+IN[2] => TEN.IN1
+IN[2] => ONE.IN1
+IN[2] => ONE.IN0
+IN[2] => ONE.IN1
+IN[3] => TEN.IN0
+IN[3] => TEN.IN0
+IN[3] => TEN.IN1
+IN[3] => TEN.IN0
+IN[3] => ONE.IN0
+IN[3] => ONE.IN1
+IN[4] => TEN.IN1
+IN[4] => TEN.IN1
+IN[4] => TEN.IN1
+IN[4] => ONE.IN1
+IN[4] => TEN.IN1
+IN[4] => ONE.IN1
+IN[4] => ONE.IN1
+TEN[0] <= TEN.DB_MAX_OUTPUT_PORT_TYPE
+TEN[1] <= TEN.DB_MAX_OUTPUT_PORT_TYPE
+TEN[2] <= <GND>
+TEN[3] <= <GND>
+ONE[0] <= IN[0].DB_MAX_OUTPUT_PORT_TYPE
+ONE[1] <= ONE.DB_MAX_OUTPUT_PORT_TYPE
+ONE[2] <= ONE.DB_MAX_OUTPUT_PORT_TYPE
+ONE[3] <= ONE.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|input_map|final:FIN|seg_7_2:TDSEG
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -54,47 +247,47 @@ data_out[5] <= mux2to1:M6.port3
 data_out[6] <= mux2to1:M7.port3
 
 
-|input_map|seg_7_2:S|cnt:C1
+|input_map|final:FIN|seg_7_2:TDSEG|cnt:C1
 clk => clk.IN1
 outclk <= cnt8:U4.port1
 
 
-|input_map|seg_7_2:S|cnt:C1|cnt8:U0
+|input_map|final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U0
 clock_c => count[0].CLK
 clock_c => count[1].CLK
 clock_c => count[2].CLK
 outclock_c <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|input_map|seg_7_2:S|cnt:C1|cnt8:U1
+|input_map|final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U1
 clock_c => count[0].CLK
 clock_c => count[1].CLK
 clock_c => count[2].CLK
 outclock_c <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|input_map|seg_7_2:S|cnt:C1|cnt8:U2
+|input_map|final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U2
 clock_c => count[0].CLK
 clock_c => count[1].CLK
 clock_c => count[2].CLK
 outclock_c <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|input_map|seg_7_2:S|cnt:C1|cnt8:U3
+|input_map|final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U3
 clock_c => count[0].CLK
 clock_c => count[1].CLK
 clock_c => count[2].CLK
 outclock_c <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|input_map|seg_7_2:S|cnt:C1|cnt8:U4
+|input_map|final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U4
 clock_c => count[0].CLK
 clock_c => count[1].CLK
 clock_c => count[2].CLK
 outclock_c <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|input_map|seg_7_2:S|seg_7:LSD
+|input_map|final:FIN|seg_7_2:TDSEG|seg_7:LSD
 A[0] => a.IN0
 A[0] => b.IN0
 A[0] => c.IN1
@@ -134,7 +327,7 @@ com[2] <= <GND>
 com[3] <= <GND>
 
 
-|input_map|seg_7_2:S|seg_7:MSD
+|input_map|final:FIN|seg_7_2:TDSEG|seg_7:MSD
 A[0] => a.IN0
 A[0] => b.IN0
 A[0] => c.IN1
@@ -174,7 +367,7 @@ com[2] <= <GND>
 com[3] <= <GND>
 
 
-|input_map|seg_7_2:S|mux2to1:M1
+|input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M1
 a => z.IN0
 a => z.IN0
 i0 => z.IN1
@@ -182,7 +375,7 @@ i1 => z.IN1
 z <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|input_map|seg_7_2:S|mux2to1:M2
+|input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M2
 a => z.IN0
 a => z.IN0
 i0 => z.IN1
@@ -190,7 +383,7 @@ i1 => z.IN1
 z <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|input_map|seg_7_2:S|mux2to1:M3
+|input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M3
 a => z.IN0
 a => z.IN0
 i0 => z.IN1
@@ -198,7 +391,7 @@ i1 => z.IN1
 z <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|input_map|seg_7_2:S|mux2to1:M4
+|input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M4
 a => z.IN0
 a => z.IN0
 i0 => z.IN1
@@ -206,7 +399,7 @@ i1 => z.IN1
 z <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|input_map|seg_7_2:S|mux2to1:M5
+|input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M5
 a => z.IN0
 a => z.IN0
 i0 => z.IN1
@@ -214,7 +407,7 @@ i1 => z.IN1
 z <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|input_map|seg_7_2:S|mux2to1:M6
+|input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M6
 a => z.IN0
 a => z.IN0
 i0 => z.IN1
@@ -222,7 +415,7 @@ i1 => z.IN1
 z <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|input_map|seg_7_2:S|mux2to1:M7
+|input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M7
 a => z.IN0
 a => z.IN0
 i0 => z.IN1
@@ -230,7 +423,7 @@ i1 => z.IN1
 z <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|input_map|seg_7_2:S|mux2to1:M8
+|input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M8
 a => z.IN0
 a => z.IN0
 i0 => z.IN1
@@ -238,7 +431,7 @@ i1 => z.IN1
 z <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|input_map|seg_7_2:S|mux2to1:M9
+|input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M9
 a => z.IN0
 a => z.IN0
 i0 => z.IN1

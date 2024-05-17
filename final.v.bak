@@ -1,0 +1,9 @@
+module final(A, B, SEG, CA ,clk);
+
+wire [5:0] binary;
+
+four_bit_padder()
+
+bcd_converter(DSW[7:3], LED[7:4], LED[3:0]);
+
+endmodule

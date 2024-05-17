@@ -1,9 +1,9 @@
-module four_bit_padder(A, B, S, Cout, V, p);
+module four_bit_padder(A, B, S, Cout, V);
 
 input [3:0] A;
 input [3:0] B;
 output [3:0] S;
-output Cout, V, p;
+output Cout, V;
 
 wire c1, c2, c3;
 
@@ -24,6 +24,4 @@ and Vand1 (v1, na3, nb3, S[3]);
 and Vand2 (v2, A[3], B[3], ns3);
 
 or Vor (V, v1, v2);
-
-assign p = 1'b0;
 endmodule

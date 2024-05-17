@@ -7,6 +7,6 @@ output p;
 
 assign p = 1'b0;
 
-seg_7_2 S (DSW[4:7], DSW[0:3],CLOCK, CA, SEG);
+final FIN (DSW[4:7], DSW[0:3], SEG, CA, CLOCK);
 
 endmodule

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for psj
-Fri May 10 14:40:09 2024
+Fri May 17 14:57:16 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,14 +14,16 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "seg_7_2:S|mux2to1:M9"
- 10. Port Connectivity Checks: "seg_7_2:S|mux2to1:M8"
- 11. Port Connectivity Checks: "seg_7_2:S|seg_7:MSD"
- 12. Port Connectivity Checks: "seg_7_2:S|seg_7:LSD"
- 13. Port Connectivity Checks: "seg_7_2:S"
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+  9. Port Connectivity Checks: "final:FIN|seg_7_2:TDSEG|mux2to1:M9"
+ 10. Port Connectivity Checks: "final:FIN|seg_7_2:TDSEG|mux2to1:M8"
+ 11. Port Connectivity Checks: "final:FIN|seg_7_2:TDSEG|seg_7:MSD"
+ 12. Port Connectivity Checks: "final:FIN|seg_7_2:TDSEG|seg_7:LSD"
+ 13. Port Connectivity Checks: "final:FIN|seg_7_2:TDSEG"
+ 14. Port Connectivity Checks: "final:FIN|four_bit_padder:ADDER|full_adder:F1"
+ 15. Port Connectivity Checks: "final:FIN|four_bit_padder:ADDER"
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,13 +49,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 10 14:40:09 2024           ;
+; Analysis & Synthesis Status        ; Successful - Fri May 17 14:57:16 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; psj                                             ;
 ; Top-level Entity Name              ; input_map                                       ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 41                                              ;
-;     Total combinational functions  ; 41                                              ;
+; Total logic elements               ; 45                                              ;
+;     Total combinational functions  ; 45                                              ;
 ;     Dedicated logic registers      ; 15                                              ;
 ; Total registers                    ; 15                                              ;
 ; Total pins                         ; 30                                              ;
@@ -162,70 +164,86 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                     ;
-+----------------------------------+-----------------+------------------------+------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path       ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------+---------+
-; seg_7.v                          ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/seg_7.v     ;         ;
-; mux2to1.v                        ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/mux2to1.v   ;         ;
-; cnt8.v                           ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/cnt8.v      ;         ;
-; cnt.v                            ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/cnt.v       ;         ;
-; seg_7_2.v                        ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/seg_7_2.v   ;         ;
-; input_map.v                      ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/input_map.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+; bcd_converter.v                  ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/bcd_converter.v   ;         ;
+; half_adder.v                     ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/half_adder.v      ;         ;
+; full_adder.v                     ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/full_adder.v      ;         ;
+; four_bit_padder.v                ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/four_bit_padder.v ;         ;
+; seg_7.v                          ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/seg_7.v           ;         ;
+; mux2to1.v                        ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/mux2to1.v         ;         ;
+; cnt8.v                           ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/cnt8.v            ;         ;
+; cnt.v                            ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/cnt.v             ;         ;
+; seg_7_2.v                        ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/seg_7_2.v         ;         ;
+; input_map.v                      ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/input_map.v       ;         ;
+; final.v                          ; yes             ; User Verilog HDL File  ; C:/altera/projects/psj/final.v           ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                     ;
-+---------------------------------------------+-----------------------------------+
-; Resource                                    ; Usage                             ;
-+---------------------------------------------+-----------------------------------+
-; Estimated Total logic elements              ; 41                                ;
-;                                             ;                                   ;
-; Total combinational functions               ; 41                                ;
-; Logic element usage by number of LUT inputs ;                                   ;
-;     -- 4 input functions                    ; 16                                ;
-;     -- 3 input functions                    ; 8                                 ;
-;     -- <=2 input functions                  ; 17                                ;
-;                                             ;                                   ;
-; Logic elements by mode                      ;                                   ;
-;     -- normal mode                          ; 41                                ;
-;     -- arithmetic mode                      ; 0                                 ;
-;                                             ;                                   ;
-; Total registers                             ; 15                                ;
-;     -- Dedicated logic registers            ; 15                                ;
-;     -- I/O registers                        ; 0                                 ;
-;                                             ;                                   ;
-; I/O pins                                    ; 30                                ;
-; Embedded Multiplier 9-bit elements          ; 0                                 ;
-; Maximum fan-out node                        ; seg_7_2:S|cnt:C1|cnt8:U4|count[2] ;
-; Maximum fan-out                             ; 14                                ;
-; Total fan-out                               ; 182                               ;
-; Average fan-out                             ; 1.57                              ;
-+---------------------------------------------+-----------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                   ;
++---------------------------------------------+-------------------------------------------------+
+; Resource                                    ; Usage                                           ;
++---------------------------------------------+-------------------------------------------------+
+; Estimated Total logic elements              ; 45                                              ;
+;                                             ;                                                 ;
+; Total combinational functions               ; 45                                              ;
+; Logic element usage by number of LUT inputs ;                                                 ;
+;     -- 4 input functions                    ; 18                                              ;
+;     -- 3 input functions                    ; 12                                              ;
+;     -- <=2 input functions                  ; 15                                              ;
+;                                             ;                                                 ;
+; Logic elements by mode                      ;                                                 ;
+;     -- normal mode                          ; 45                                              ;
+;     -- arithmetic mode                      ; 0                                               ;
+;                                             ;                                                 ;
+; Total registers                             ; 15                                              ;
+;     -- Dedicated logic registers            ; 15                                              ;
+;     -- I/O registers                        ; 0                                               ;
+;                                             ;                                                 ;
+; I/O pins                                    ; 30                                              ;
+; Embedded Multiplier 9-bit elements          ; 0                                               ;
+; Maximum fan-out node                        ; final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U4|count[2] ;
+; Maximum fan-out                             ; 14                                              ;
+; Total fan-out                               ; 198                                             ;
+; Average fan-out                             ; 1.65                                            ;
++---------------------------------------------+-------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
-; |input_map                 ; 41 (0)            ; 15 (0)       ; 0           ; 0            ; 0       ; 0         ; 30   ; 0            ; |input_map                          ; work         ;
-;    |seg_7_2:S|             ; 41 (0)            ; 15 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|seg_7_2:S                ; work         ;
-;       |cnt:C1|             ; 19 (0)            ; 15 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|seg_7_2:S|cnt:C1         ; work         ;
-;          |cnt8:U0|         ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|seg_7_2:S|cnt:C1|cnt8:U0 ; work         ;
-;          |cnt8:U1|         ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|seg_7_2:S|cnt:C1|cnt8:U1 ; work         ;
-;          |cnt8:U2|         ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|seg_7_2:S|cnt:C1|cnt8:U2 ; work         ;
-;          |cnt8:U3|         ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|seg_7_2:S|cnt:C1|cnt8:U3 ; work         ;
-;          |cnt8:U4|         ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|seg_7_2:S|cnt:C1|cnt8:U4 ; work         ;
-;       |mux2to1:M1|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|seg_7_2:S|mux2to1:M1     ; work         ;
-;       |mux2to1:M2|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|seg_7_2:S|mux2to1:M2     ; work         ;
-;       |mux2to1:M3|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|seg_7_2:S|mux2to1:M3     ; work         ;
-;       |mux2to1:M4|         ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|seg_7_2:S|mux2to1:M4     ; work         ;
-;       |mux2to1:M6|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|seg_7_2:S|mux2to1:M6     ; work         ;
-;       |mux2to1:M7|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|seg_7_2:S|mux2to1:M7     ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Library Name ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+; |input_map                    ; 45 (0)            ; 15 (0)       ; 0           ; 0            ; 0       ; 0         ; 30   ; 0            ; |input_map                                                              ; work         ;
+;    |final:FIN|                ; 45 (0)            ; 15 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN                                                    ; work         ;
+;       |bcd_converter:BCD|     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|bcd_converter:BCD                                  ; work         ;
+;       |four_bit_padder:ADDER| ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|four_bit_padder:ADDER                              ; work         ;
+;          |full_adder:F1|      ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|four_bit_padder:ADDER|full_adder:F1                ; work         ;
+;             |half_adder:HA1|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|four_bit_padder:ADDER|full_adder:F1|half_adder:HA1 ; work         ;
+;          |full_adder:F2|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|four_bit_padder:ADDER|full_adder:F2                ; work         ;
+;             |half_adder:HA2|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|four_bit_padder:ADDER|full_adder:F2|half_adder:HA2 ; work         ;
+;          |full_adder:F3|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|four_bit_padder:ADDER|full_adder:F3                ; work         ;
+;             |half_adder:HA2|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|four_bit_padder:ADDER|full_adder:F3|half_adder:HA2 ; work         ;
+;          |full_adder:F4|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|four_bit_padder:ADDER|full_adder:F4                ; work         ;
+;             |half_adder:HA2|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|four_bit_padder:ADDER|full_adder:F4|half_adder:HA2 ; work         ;
+;       |seg_7_2:TDSEG|         ; 33 (0)            ; 15 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|seg_7_2:TDSEG                                      ; work         ;
+;          |cnt:C1|             ; 19 (0)            ; 15 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|seg_7_2:TDSEG|cnt:C1                               ; work         ;
+;             |cnt8:U0|         ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U0                       ; work         ;
+;             |cnt8:U1|         ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U1                       ; work         ;
+;             |cnt8:U2|         ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U2                       ; work         ;
+;             |cnt8:U3|         ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U3                       ; work         ;
+;             |cnt8:U4|         ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U4                       ; work         ;
+;          |mux2to1:M1|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M1                           ; work         ;
+;          |mux2to1:M2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M2                           ; work         ;
+;          |mux2to1:M3|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M3                           ; work         ;
+;          |mux2to1:M4|         ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M4                           ; work         ;
+;          |mux2to1:M6|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M6                           ; work         ;
+;          |mux2to1:M7|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |input_map|final:FIN|seg_7_2:TDSEG|mux2to1:M7                           ; work         ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -244,28 +262,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Port Connectivity Checks: "seg_7_2:S|mux2to1:M9" ;
-+------+-------+----------+------------------------+
-; Port ; Type  ; Severity ; Details                ;
-+------+-------+----------+------------------------+
-; i0   ; Input ; Info     ; Stuck at GND           ;
-; i1   ; Input ; Info     ; Stuck at VCC           ;
-+------+-------+----------+------------------------+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "final:FIN|seg_7_2:TDSEG|mux2to1:M9" ;
++------+-------+----------+--------------------------------------+
+; Port ; Type  ; Severity ; Details                              ;
++------+-------+----------+--------------------------------------+
+; i0   ; Input ; Info     ; Stuck at GND                         ;
+; i1   ; Input ; Info     ; Stuck at VCC                         ;
++------+-------+----------+--------------------------------------+
 
 
-+--------------------------------------------------+
-; Port Connectivity Checks: "seg_7_2:S|mux2to1:M8" ;
-+------+-------+----------+------------------------+
-; Port ; Type  ; Severity ; Details                ;
-+------+-------+----------+------------------------+
-; i0   ; Input ; Info     ; Stuck at VCC           ;
-; i1   ; Input ; Info     ; Stuck at GND           ;
-+------+-------+----------+------------------------+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "final:FIN|seg_7_2:TDSEG|mux2to1:M8" ;
++------+-------+----------+--------------------------------------+
+; Port ; Type  ; Severity ; Details                              ;
++------+-------+----------+--------------------------------------+
+; i0   ; Input ; Info     ; Stuck at VCC                         ;
+; i1   ; Input ; Info     ; Stuck at GND                         ;
++------+-------+----------+--------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "seg_7_2:S|seg_7:MSD"                                                                                     ;
+; Port Connectivity Checks: "final:FIN|seg_7_2:TDSEG|seg_7:MSD"                                                                       ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                  ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -274,7 +292,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "seg_7_2:S|seg_7:LSD"                                                                                     ;
+; Port Connectivity Checks: "final:FIN|seg_7_2:TDSEG|seg_7:LSD"                                                                       ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                  ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -283,12 +301,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "seg_7_2:S"                                                                                                                                                                ;
+; Port Connectivity Checks: "final:FIN|seg_7_2:TDSEG"                                                                                                                                                  ;
 +----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                                                                                                               ;
 +----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; data_out ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
 +----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "final:FIN|four_bit_padder:ADDER|full_adder:F1"                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; cin     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; cin[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "final:FIN|four_bit_padder:ADDER"                                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; V    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -306,16 +343,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri May 10 14:40:07 2024
+    Info: Processing started: Fri May 17 14:57:14 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off psj -c psj
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file bcd_converter.v
+    Info (12023): Found entity 1: bcd_converter
 Info (12021): Found 1 design units, including 1 entities, in source file univexample03291.v
     Info (12023): Found entity 1: univexample03291
-Info (12021): Found 0 design units, including 0 entities, in source file dipsw_int.v
 Info (12021): Found 0 design units, including 0 entities, in source file psj.v
 Info (12021): Found 1 design units, including 1 entities, in source file half_adder.v
     Info (12023): Found entity 1: half_adder
-Info (12021): Found 0 design units, including 0 entities, in source file int_display.v
 Info (12021): Found 1 design units, including 1 entities, in source file example0405.v
     Info (12023): Found entity 1: example0405
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.v
@@ -336,23 +373,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file input_m
     Info (12023): Found entity 1: input_map
 Info (12021): Found 1 design units, including 1 entities, in source file seg_7_hex.v
     Info (12023): Found entity 1: seg_7_hex
-Info (12021): Found 1 design units, including 1 entities, in source file seg_7_2_5bit.v
-    Info (12023): Found entity 1: seg_7_2_5bit
-Info (12021): Found 1 design units, including 1 entities, in source file five_bit_adder.v
-    Info (12023): Found entity 1: five_bit_padder
-Info (12021): Found 1 design units, including 1 entities, in source file add3.v
-    Info (12023): Found entity 1: add3
-Info (12021): Found 1 design units, including 1 entities, in source file binary_to_bcd.v
-    Info (12023): Found entity 1: binary_to_BCD
-Warning (10236): Verilog HDL Implicit Net warning at seg_7_2_5bit.v(14): created implicit net for "a"
+Warning (10463): Verilog HDL Declaration warning at final.v(1): "final" is SystemVerilog-2005 keyword
+Info (12021): Found 1 design units, including 1 entities, in source file final.v
+    Info (12023): Found entity 1: final
 Info (12127): Elaborating entity "input_map" for the top level hierarchy
 Warning (10034): Output port "LED" at input_map.v(4) has no driver
-Info (12128): Elaborating entity "seg_7_2" for hierarchy "seg_7_2:S"
-Info (12128): Elaborating entity "cnt" for hierarchy "seg_7_2:S|cnt:C1"
-Info (12128): Elaborating entity "cnt8" for hierarchy "seg_7_2:S|cnt:C1|cnt8:U0"
-Info (12128): Elaborating entity "seg_7" for hierarchy "seg_7_2:S|seg_7:LSD"
-Info (12128): Elaborating entity "mux2to1" for hierarchy "seg_7_2:S|mux2to1:M1"
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "final" for hierarchy "final:FIN"
+Info (12128): Elaborating entity "four_bit_padder" for hierarchy "final:FIN|four_bit_padder:ADDER"
+Info (12128): Elaborating entity "full_adder" for hierarchy "final:FIN|four_bit_padder:ADDER|full_adder:F1"
+Info (12128): Elaborating entity "half_adder" for hierarchy "final:FIN|four_bit_padder:ADDER|full_adder:F1|half_adder:HA1"
+Info (12128): Elaborating entity "bcd_converter" for hierarchy "final:FIN|bcd_converter:BCD"
+Info (12128): Elaborating entity "seg_7_2" for hierarchy "final:FIN|seg_7_2:TDSEG"
+Info (12128): Elaborating entity "cnt" for hierarchy "final:FIN|seg_7_2:TDSEG|cnt:C1"
+Info (12128): Elaborating entity "cnt8" for hierarchy "final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U0"
+Info (12128): Elaborating entity "seg_7" for hierarchy "final:FIN|seg_7_2:TDSEG|seg_7:LSD"
+Info (12128): Elaborating entity "mux2to1" for hierarchy "final:FIN|seg_7_2:TDSEG|mux2to1:M1"
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[0]" is stuck at GND
     Warning (13410): Pin "LED[1]" is stuck at GND
@@ -368,20 +404,20 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "p" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "seg_7_2:S|cnt:C1|cnt8:U3|LessThan0"
-    Info (17048): Logic cell "seg_7_2:S|cnt:C1|cnt8:U2|LessThan0"
-    Info (17048): Logic cell "seg_7_2:S|cnt:C1|cnt8:U1|LessThan0"
-    Info (17048): Logic cell "seg_7_2:S|cnt:C1|cnt8:U0|LessThan0"
+    Info (17048): Logic cell "final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U3|LessThan0"
+    Info (17048): Logic cell "final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U2|LessThan0"
+    Info (17048): Logic cell "final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U1|LessThan0"
+    Info (17048): Logic cell "final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U0|LessThan0"
 Info (144001): Generated suppressed messages file C:/altera/projects/psj/output_files/psj.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 71 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 75 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 41 logic cells
+    Info (21061): Implemented 45 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
     Info: Peak virtual memory: 4595 megabytes
-    Info: Processing ended: Fri May 10 14:40:09 2024
+    Info: Processing ended: Fri May 17 14:57:16 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

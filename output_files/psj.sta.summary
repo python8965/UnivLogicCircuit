@@ -2,183 +2,183 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'seg_7_2:S|cnt:C1|cnt8:U2|count[2]'
-Slack : -0.569
-TNS   : -0.728
+Type  : Slow 1200mV 85C Model Setup 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U1|count[2]'
+Slack : -0.571
+TNS   : -0.735
 
-Type  : Slow 1200mV 85C Model Setup 'seg_7_2:S|cnt:C1|cnt8:U1|count[2]'
-Slack : -0.568
-TNS   : -0.726
+Type  : Slow 1200mV 85C Model Setup 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U0|count[2]'
+Slack : -0.567
+TNS   : -0.724
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK'
 Slack : -0.566
-TNS   : -0.718
+TNS   : -0.725
 
-Type  : Slow 1200mV 85C Model Setup 'seg_7_2:S|cnt:C1|cnt8:U0|count[2]'
-Slack : -0.565
+Type  : Slow 1200mV 85C Model Setup 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U2|count[2]'
+Slack : -0.566
 TNS   : -0.721
 
-Type  : Slow 1200mV 85C Model Setup 'seg_7_2:S|cnt:C1|cnt8:U3|count[2]'
-Slack : -0.286
-TNS   : -0.286
+Type  : Slow 1200mV 85C Model Setup 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U3|count[2]'
+Slack : -0.288
+TNS   : -0.288
 
-Type  : Slow 1200mV 85C Model Hold 'seg_7_2:S|cnt:C1|cnt8:U1|count[2]'
-Slack : -0.457
-TNS   : -0.457
+Type  : Slow 1200mV 85C Model Hold 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U2|count[2]'
+Slack : -0.404
+TNS   : -0.404
 
-Type  : Slow 1200mV 85C Model Hold 'seg_7_2:S|cnt:C1|cnt8:U2|count[2]'
-Slack : -0.338
-TNS   : -0.338
+Type  : Slow 1200mV 85C Model Hold 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U1|count[2]'
+Slack : -0.318
+TNS   : -0.318
 
-Type  : Slow 1200mV 85C Model Hold 'seg_7_2:S|cnt:C1|cnt8:U0|count[2]'
-Slack : -0.284
-TNS   : -0.284
+Type  : Slow 1200mV 85C Model Hold 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U0|count[2]'
+Slack : -0.205
+TNS   : -0.205
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK'
-Slack : 0.081
+Slack : 0.136
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'seg_7_2:S|cnt:C1|cnt8:U3|count[2]'
-Slack : 0.453
+Type  : Slow 1200mV 85C Model Hold 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U3|count[2]'
+Slack : 0.452
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK'
 Slack : -3.000
 TNS   : -7.461
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'seg_7_2:S|cnt:C1|cnt8:U0|count[2]'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U0|count[2]'
 Slack : -1.487
 TNS   : -4.461
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'seg_7_2:S|cnt:C1|cnt8:U1|count[2]'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U1|count[2]'
 Slack : -1.487
 TNS   : -4.461
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'seg_7_2:S|cnt:C1|cnt8:U2|count[2]'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U2|count[2]'
 Slack : -1.487
 TNS   : -4.461
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'seg_7_2:S|cnt:C1|cnt8:U3|count[2]'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U3|count[2]'
 Slack : -1.487
 TNS   : -4.461
 
-Type  : Slow 1200mV 0C Model Setup 'seg_7_2:S|cnt:C1|cnt8:U1|count[2]'
+Type  : Slow 1200mV 0C Model Setup 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U1|count[2]'
+Slack : -0.428
+TNS   : -0.509
+
+Type  : Slow 1200mV 0C Model Setup 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U0|count[2]'
 Slack : -0.427
 TNS   : -0.504
 
-Type  : Slow 1200mV 0C Model Setup 'seg_7_2:S|cnt:C1|cnt8:U2|count[2]'
+Type  : Slow 1200mV 0C Model Setup 'CLOCK'
 Slack : -0.426
 TNS   : -0.504
 
-Type  : Slow 1200mV 0C Model Setup 'seg_7_2:S|cnt:C1|cnt8:U0|count[2]'
-Slack : -0.424
-TNS   : -0.500
-
-Type  : Slow 1200mV 0C Model Setup 'CLOCK'
+Type  : Slow 1200mV 0C Model Setup 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U2|count[2]'
 Slack : -0.424
 TNS   : -0.498
 
-Type  : Slow 1200mV 0C Model Setup 'seg_7_2:S|cnt:C1|cnt8:U3|count[2]'
-Slack : -0.159
-TNS   : -0.159
+Type  : Slow 1200mV 0C Model Setup 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U3|count[2]'
+Slack : -0.161
+TNS   : -0.161
 
-Type  : Slow 1200mV 0C Model Hold 'seg_7_2:S|cnt:C1|cnt8:U1|count[2]'
-Slack : -0.329
-TNS   : -0.329
+Type  : Slow 1200mV 0C Model Hold 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U2|count[2]'
+Slack : -0.259
+TNS   : -0.259
 
-Type  : Slow 1200mV 0C Model Hold 'seg_7_2:S|cnt:C1|cnt8:U2|count[2]'
-Slack : -0.238
-TNS   : -0.238
+Type  : Slow 1200mV 0C Model Hold 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U1|count[2]'
+Slack : -0.229
+TNS   : -0.229
 
-Type  : Slow 1200mV 0C Model Hold 'seg_7_2:S|cnt:C1|cnt8:U0|count[2]'
-Slack : -0.164
-TNS   : -0.164
+Type  : Slow 1200mV 0C Model Hold 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U0|count[2]'
+Slack : -0.108
+TNS   : -0.108
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK'
-Slack : 0.164
+Slack : 0.232
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'seg_7_2:S|cnt:C1|cnt8:U3|count[2]'
-Slack : 0.402
+Type  : Slow 1200mV 0C Model Hold 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U3|count[2]'
+Slack : 0.401
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK'
 Slack : -3.000
 TNS   : -7.461
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'seg_7_2:S|cnt:C1|cnt8:U0|count[2]'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U0|count[2]'
 Slack : -1.487
 TNS   : -4.461
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'seg_7_2:S|cnt:C1|cnt8:U1|count[2]'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U1|count[2]'
 Slack : -1.487
 TNS   : -4.461
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'seg_7_2:S|cnt:C1|cnt8:U2|count[2]'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U2|count[2]'
 Slack : -1.487
 TNS   : -4.461
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'seg_7_2:S|cnt:C1|cnt8:U3|count[2]'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U3|count[2]'
 Slack : -1.487
 TNS   : -4.461
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK'
-Slack : 0.143
+Slack : 0.145
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'seg_7_2:S|cnt:C1|cnt8:U2|count[2]'
-Slack : 0.306
+Type  : Fast 1200mV 0C Model Setup 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U1|count[2]'
+Slack : 0.225
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'seg_7_2:S|cnt:C1|cnt8:U0|count[2]'
-Slack : 0.314
+Type  : Fast 1200mV 0C Model Setup 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U0|count[2]'
+Slack : 0.227
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'seg_7_2:S|cnt:C1|cnt8:U1|count[2]'
-Slack : 0.319
+Type  : Fast 1200mV 0C Model Setup 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U2|count[2]'
+Slack : 0.320
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'seg_7_2:S|cnt:C1|cnt8:U3|count[2]'
-Slack : 0.440
+Type  : Fast 1200mV 0C Model Setup 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U3|count[2]'
+Slack : 0.436
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'seg_7_2:S|cnt:C1|cnt8:U1|count[2]'
-Slack : -0.322
-TNS   : -0.322
+Type  : Fast 1200mV 0C Model Hold 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U2|count[2]'
+Slack : -0.308
+TNS   : -0.308
 
-Type  : Fast 1200mV 0C Model Hold 'seg_7_2:S|cnt:C1|cnt8:U2|count[2]'
-Slack : -0.244
-TNS   : -0.244
+Type  : Fast 1200mV 0C Model Hold 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U1|count[2]'
+Slack : -0.196
+TNS   : -0.196
 
-Type  : Fast 1200mV 0C Model Hold 'seg_7_2:S|cnt:C1|cnt8:U0|count[2]'
-Slack : -0.241
-TNS   : -0.241
+Type  : Fast 1200mV 0C Model Hold 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U0|count[2]'
+Slack : -0.183
+TNS   : -0.183
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK'
-Slack : -0.097
-TNS   : -0.097
+Slack : -0.104
+TNS   : -0.104
 
-Type  : Fast 1200mV 0C Model Hold 'seg_7_2:S|cnt:C1|cnt8:U3|count[2]'
-Slack : 0.187
+Type  : Fast 1200mV 0C Model Hold 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U3|count[2]'
+Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK'
 Slack : -3.000
-TNS   : -6.195
+TNS   : -6.192
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'seg_7_2:S|cnt:C1|cnt8:U0|count[2]'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U0|count[2]'
 Slack : -1.000
 TNS   : -3.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'seg_7_2:S|cnt:C1|cnt8:U1|count[2]'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U1|count[2]'
 Slack : -1.000
 TNS   : -3.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'seg_7_2:S|cnt:C1|cnt8:U2|count[2]'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U2|count[2]'
 Slack : -1.000
 TNS   : -3.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'seg_7_2:S|cnt:C1|cnt8:U3|count[2]'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'final:FIN|seg_7_2:TDSEG|cnt:C1|cnt8:U3|count[2]'
 Slack : -1.000
 TNS   : -3.000
 
